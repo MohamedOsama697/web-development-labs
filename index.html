@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mohamed Osama - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header>
+        <h1>Mohamed Osama</h1>
+        <div class="subtitle">Web Developer | Designer | Freelancer</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                Hello! I'm Mohamed Osama, a passionate web developer with experience in creating responsive and 
+                interactive websites. I love coding, designing, and bringing ideas to life on the web.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <h3>Event Management System</h3>
+                    <p>The Event Management System (EMS) is a desktop application developed in Java using JavaFX. It provides a role-based platform for managing events, user registrations, and event interactions. The system is designed using solid Object-Oriented Programming (OOP) principles, ensuring a modular, extensible, and user-friendly experience..</p>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <h3>Fire boy and water girl</h3>
+                    <p>AThis is a C++ project implementing a Fireboy and Watergirl game using the SFML (Simple and Fast Multimedia Library). The game features two characters, Fireboy and Watergirl, who must work together to solve puzzles, collect diamonds, and reach their respective exits while avoiding hazards.</p>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <h3>Hotel Management System</h3>
+                    <p>The Hotel Management System (HMS) is a desktop application developed using C# and SQL Server. It provides an integrated platform for managing hotel operations, including room reservations, guest information, room availability, and billing. The system is designed using Object-Oriented Programming (OOP) principles, ensuring a modular, maintainable, and user-friendly experience while improving the efficiency of hotel management processes..</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault();">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2025 Mohamed Osama. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
