@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple List Adder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1 id="title">Welcome</h1>
+    <div class="entry">
+      <input id="name" placeholder="Your name" aria-label="Your name" />
+      <button id="greet">Greet</button>
+    </div>
+    <ul id="list" aria-label="Names"></ul>
+  </main>
+
+<script>
+  function addName() {
+    const input = document.getElementById('name');
+    const name = input.value.trim();
+
+    if (!name) return; 
+
+    document.getElementById('title').textContent = `Hello, ${name}!`;
+
+    const li = document.createElement('li');
+    li.textContent = name;
+    document.getElementById('list').appendChild(li);
+
+    input.value = ''; 
+  }
+
+  function removeName(e) {
+    if (e.target.nodeName === 'LI') {
+      const name = e.target.textContent;
+      document.getElementById('title').textContent = `Goodbye, ${name}! see you later.`;
+      e.target.remove();
+    }
+  }
+
+  document.getElementById('greet').addEventListener('click', addName);
+  document.getElementById('list').addEventListener('click', removeName);
+</script>
+</body>
+</html>
