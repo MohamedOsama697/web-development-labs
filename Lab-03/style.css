@@ -1,0 +1,240 @@
+/* Apply to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Style the page */
+body {
+    margin: 0;
+    padding: 25px 15px;
+    min-height: 100vh;
+    background-color: #f1f3fb;
+    font-family: Arial, sans-serif;
+    color: #202536;
+}
+
+/* Main app container */
+.todo-app {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 14px 16px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px rgba(34, 45, 80, 0.08);
+}
+
+/* App title */
+h1 {
+    margin: 0 0 15px;
+    font-size: 22px;
+}
+
+/* Input form */
+#todo-form {
+    display: flex;
+    gap: 8px;
+}
+
+/* Input field */
+#todo-input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #e0e4ee;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Highlight the input when selected */
+#todo-input:focus {
+    border-color: #397ff0;
+}
+
+/* Make buttons clickable */
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Add button */
+.add-button {
+    padding: 10px 17px;
+    background-color: #397ff0;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+/* Add button hover effect */
+.add-button:hover {
+    background-color: #286bd8;
+}
+
+/* Instructions and filters */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+/* Instruction text */
+.tip {
+    margin: 0;
+    color: #858b99;
+    font-size: 12px;
+}
+
+/* Filter buttons container */
+.filters {
+    display: flex;
+    gap: 5px;
+}
+
+/* Individual filter buttons */
+.filter {
+    padding: 7px 10px;
+    color: #606879;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* Filter hover effect */
+.filter:hover {
+    background-color: #f4f6fc;
+}
+
+/* Selected filter */
+.active-filter {
+    background-color: #eaf1ff;
+    color: #3479ed;
+    border-color: #d7e4ff;
+}
+
+/* Task list */
+#todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Each task */
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 47px;
+    padding: 10px 8px;
+    border-bottom: 1px solid #f0f1f5;
+}
+
+/* Checkbox */
+.todo-checkbox {
+    width: 15px;
+    height: 15px;
+    margin-left: 7px;
+    accent-color: #397ff0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Task text */
+.todo-text {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* Completed task */
+.todo-item.completed .todo-text {
+    color: #9298a5;
+    text-decoration: line-through;
+}
+
+/* Input used to edit a task */
+.edit-input {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+    border: 1px solid #397ff0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Delete button */
+.delete-button {
+    padding: 3px 5px;
+    color: #a1a6b1;
+    background: transparent;
+    border: none;
+    font-size: 17px;
+}
+
+/* Delete button hover effect */
+.delete-button:hover {
+    color: #e04b55;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+    color: #858b99;
+    font-size: 12px;
+}
+
+/* Footer buttons container */
+.footer-buttons {
+    display: flex;
+    gap: 7px;
+}
+
+/* Footer buttons */
+.footer-buttons button {
+    padding: 3px 7px;
+    color: #646b78;
+    background-color: #f8f8f9;
+    border: 1px solid #c9cbd1;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Footer button hover effect */
+.footer-buttons button:hover {
+    background-color: #eceef3;
+}
+
+/* Adjust layout for mobile screens */
+@media (max-width: 520px) {
+    .toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+    .filter {
+        flex: 1;
+    }
+
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
